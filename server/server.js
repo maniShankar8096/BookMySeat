@@ -36,6 +36,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(clientBuildPath, "index.html"));
 });
 
-app.listen(8082, () => {
-  console.log("server is running on port 8082");
+app.listen(process.env.SERVER_PORT, () => {
+  console.log(`server is running on port ${process.env.SERVER_PORT}`);
 });
